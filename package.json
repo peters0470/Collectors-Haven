@@ -23,5 +23,8 @@
   "homepage": "https://github.com/peters0470/group-project3#readme",
   "devDependencies": {
     "concurrently": "^6.0.0"
+  },
+  "dependencies": {
+    "if-env": "^1.0.4"
   }
 }
