@@ -32,13 +32,14 @@ header nav ul li {
 .reviews-container {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: min-content + 5px;
+    width: 20rem;
     padding: 20px;
     padding-bottom: 5px;
     margin: 10px;
@@ -54,18 +55,28 @@ header nav ul li {
 
 /* ? FEATURES STYLES */
 
-/* .feature-container-right {
+.features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+.feature-container-left {
     border: 1px solid black;
     padding: 15px;
     width:800px;
+    margin: 10px;
     position: relative;
-    left: 1120px;
-} */
-.feature-container {
+    right: 400px;
+}
+.feature-container-right {
     border: 1px solid black;
     padding: 15px;
     width:800px;
-    margin: 15px;
+    margin: 10px;
+    position: relative;
+    left: 400px;
+    text-align: right;
 }
 .feature-container h3 {
     padding-bottom: 5px;
