@@ -1,9 +1,10 @@
 import React from 'react';
+import Reviews from '../components/Reviews'
 
 const Home = () => {
     return (
         <div>
-          <h1>Hello</h1>
+          <Reviews />
         </div>
     )
 }

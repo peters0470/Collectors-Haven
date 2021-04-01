@@ -26,3 +26,27 @@ header nav ul li {
     border: 1px solid black;
     border-radius: 5px;
 }
+
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min-content + 5px;
+    padding: 20px;
+    padding-bottom: 5px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.container div {
+    border-top: 1px solid black;
+    margin-top: 8px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
