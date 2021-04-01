@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* ? HEADER/NAV STYLES */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +28,7 @@ header nav ul li {
     border-radius: 5px;
 }
 
-
+/* ? REVIEWS STYLES */
 .reviews-container {
     display: flex;
     justify-content: center;
@@ -49,4 +50,26 @@ header nav ul li {
     padding-top: 10px;
     display: flex;
     align-items: center;
+}
+
+/* ? FEATURES STYLES */
+
+/* .feature-container-right {
+    border: 1px solid black;
+    padding: 15px;
+    width:800px;
+    position: relative;
+    left: 1120px;
+} */
+.feature-container {
+    border: 1px solid black;
+    padding: 15px;
+    width:800px;
+    margin: 15px;
+}
+.feature-container h3 {
+    padding-bottom: 5px;
+}
+.feature-container p {
+    padding-top: 5px;
 }
