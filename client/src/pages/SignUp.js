@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SignUp = () => {
+  const [formState, setFormState] = useState({ username: '',  password: '' });
+
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="signForm-handler">
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor="username">Username: </label>
           <input
@@ -11,6 +28,8 @@ const SignUp = () => {
             type="username"
             name="username"
             id="signUp-username"
+            value={formState.username}
+            onChange={handleChange}
           ></input>
         </div>
         <div>
@@ -20,6 +39,8 @@ const SignUp = () => {
             type="password"
             name="password"
             id="signUp-pwd"
+            value={formState.password}
+            onChange={handleChange}
           ></input>
         </div>
         <button className='sign-btn'>Sign Up!</button>
