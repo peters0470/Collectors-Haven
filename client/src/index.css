@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+
+:root {
+    --font-family: 'Palanquin', sans-serif
 }
 
 /* ? HEADER/NAV STYLES */
@@ -21,12 +27,20 @@ header nav ul {
     align-items: center;
     list-style-type: none;
 }
-header nav ul li {
+.nav-elements {
     padding: 10px 50px;
     margin: 0 20px;
     border: 1px solid black;
     border-radius: 5px;
 }
+.link {
+    text-decoration: none;
+}
+.font-color {
+    font-family: var(--font-family);
+    color: black;
+}
+
 
 /* ? REVIEWS STYLES */
 .reviews-container {

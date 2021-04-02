@@ -10,13 +10,13 @@ const Nav = () => {
 
           <nav>
             <ul>
-              <li>
-                <Link to='/'>
+              <li className='nav-elements'>
+                <Link to='/' className='link font-color'>
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to='/login'>
+              <li className='nav-elements'>
+                <Link to='/login' className='link font-color'>
                   Sign In
                 </Link>
               </li>
