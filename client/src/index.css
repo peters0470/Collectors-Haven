@@ -1,3 +1,5 @@
+@import "react-slideshow-image/dist/styles.css";
+
 * {
     padding: 0;
     margin: 0;
@@ -47,6 +49,7 @@ header nav ul {
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-top: 50px;
 }
 .container {
     display: flex;
@@ -73,7 +76,7 @@ header nav ul {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 .feature-container-left {
@@ -104,11 +107,11 @@ header nav ul {
 
 /* ? HERO SLIDER */
 .slide-container {
-    position: relative;
-    height: 50vh;
-    width: 90vw;
+    height: 75vh;
+    width: 99vw;
     margin: 0 auto;
     overflow: hidden;
+    background-color: red;
 }
 
 .each-slide > div {
@@ -116,7 +119,7 @@ header nav ul {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    height: 350px;
+    height: 75vh;
   }
   
 .each-slide span {
@@ -127,13 +130,13 @@ header nav ul {
 }
 
 /* ? SignIn Page */
-.signInForm-handler {
+.signForm-handler {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90vh;
 }
-.signInForm-handler form {
+.signForm-handler form {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -149,7 +152,7 @@ form input {
     border-radius: 5px;
     border: 1px solid black;
 }
-.signIn-btn {
+.sign-btn {
     padding: 10px 20px;
 }
 

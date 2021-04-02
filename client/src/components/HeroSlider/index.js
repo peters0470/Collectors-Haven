@@ -1,17 +1,22 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import 'react-slideshow-image/dist/styles.css';
 
+import imgOne from '../../assets/images/gaming-pc.jpg'
+import imgTwo from '../../assets/images/marioLand.jpg';
+import imgThree from '../../assets/images/ps4Controller-purple.jpg';
+import imgFour from '../../assets/images/retroPc.jpg';
+import imgFive from '../../assets/images/vrAtSunset.jpg';
 
 
 const HeroSlider = () => {
 
   const slideImages = [
-    '../../assets/images/gaming-pc.jpg',
-    '../../assets/images/marioLand.jpg',
-    '../../assets/images/ps4Controller-purple.jpg',
-    '../../assets/images/retroPc.jpg',
-    '../../assets/images/vrAtSunset.jpg'
+    imgOne,
+    imgTwo,
+    imgThree,
+    imgFour,
+    imgFive
   ];
 
     return (
@@ -46,5 +51,5 @@ const HeroSlider = () => {
       </div>
     )
 }
-
+// <img src={require('/images/image-name.png')} /> r
 export default HeroSlider

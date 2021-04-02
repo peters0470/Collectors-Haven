@@ -20,6 +20,11 @@ const Nav = () => {
                   Sign In
                 </Link>
               </li>
+              <li>
+                <Link to='/collection'>
+                  Collection
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
