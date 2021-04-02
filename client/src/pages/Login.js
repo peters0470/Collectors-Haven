@@ -26,8 +26,11 @@ const Login = (props) => {
     });
   };
 
+
+
+const Login = () => {
   return (
-    <div className='signInForm-handler'>
+    <div className='signForm-handler'>
       <form onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor='username'>Username: </label>
@@ -51,11 +54,12 @@ const Login = (props) => {
             onChange={handleChange}
           ></input>
         </div>
-        <button className='signIn-btn'>Sign In</button>
+        <button className='sign-btn'>Sign In</button>
         <Link to="signUp">Sign-Up Here</Link>
       </form>
     </div>
   );
 };
+}
 
 export default Login;
