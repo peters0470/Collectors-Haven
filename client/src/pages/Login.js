@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 
+
+
+
+
 const Login = (props) => {
   const [formState, setFormState] = useState({ username: '', password: '' });
 
@@ -25,10 +29,6 @@ const Login = (props) => {
       password: '',
     });
   };
-
-
-
-const Login = () => {
   return (
     <div className='signForm-handler'>
       <form onSubmit={handleFormSubmit}>
@@ -60,6 +60,6 @@ const Login = () => {
     </div>
   );
 };
-}
+
 
 export default Login;
