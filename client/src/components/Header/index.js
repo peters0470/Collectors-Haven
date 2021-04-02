@@ -10,18 +10,18 @@ const Nav = () => {
 
           <nav>
             <ul>
-              <li className='nav-elements'>
-                <Link to='/' className='link font-color'>
+              <li className=''>
+                <Link to='/' className='link nav-elements'>
                   Home
                 </Link>
               </li>
-              <li className='nav-elements'>
-                <Link to='/login' className='link font-color'>
+              <li>
+                <Link to='/login' className='link nav-elements'>
                   Sign In
                 </Link>
               </li>
-              <li className='nav-elements'>
-                <Link to='/collection' className='link font-color'>
+              <li>
+                <Link to='/collection' className='link nav-elements'>
                   Collection
                 </Link>
               </li>
