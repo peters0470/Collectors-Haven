@@ -60,6 +60,7 @@ header nav ul li {
     flex-flow: column wrap;
     align-items: center;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 .feature-container-left {
     max-width: 800px;
@@ -111,13 +112,41 @@ header nav ul li {
     text-align: center;
 }
 
+/* ? SignIn Page */
+.signInForm-handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.signInForm-handler form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    font-family: 'Palanquin', sans-serif;
+}
+form input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.signIn-btn {
+    padding: 10px 20px;
+}
+
+
+
 /* ? FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    margin-top: 50px;
     border-top: 1px solid black;
 }
 
