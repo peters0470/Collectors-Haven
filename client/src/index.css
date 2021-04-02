@@ -9,7 +9,15 @@
 }
 
 :root {
-    --font-family: 'Palanquin', sans-serif
+    --font-family: 'Palanquin', sans-serif;
+
+    --base-color-: #f7f3e9;
+    --red-accent-: #f05945;
+    --light-blue-accent-: #a3d2ca;
+    --dark-blue-accent-: #5eaaa8;
+}
+#root {
+    background-color: var(--base-color-);
 }
 
 /* ? HEADER/NAV STYLES */
@@ -17,7 +25,8 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px 25px;
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
+    background-color: var(--light-blue-accent-);
 }
 header nav {
     margin: 5px 0;
@@ -28,12 +37,15 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
+    
 }
 .nav-elements {
     padding: 10px 50px;
     margin: 0 20px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
+    font-size: 18px;
+    font-weight: bolder;
 }
 .link {
     text-decoration: none;
@@ -61,6 +73,7 @@ header nav ul {
     padding-bottom: 5px;
     margin: 10px;
     border: 1px solid black;
+    border-radius: 10px;
 }
 .container div {
     border-top: 1px solid black;
@@ -83,6 +96,7 @@ header nav ul {
     max-width: 800px;
     min-width: 400px;
     border: 1px solid black;
+    border-radius: 10px;
     padding: 15px;
     margin: 10px;
     margin-left: 300px;
@@ -92,6 +106,7 @@ header nav ul {
     max-width: 800px;
     min-width: 400px;
     border: 1px solid black;
+    border-radius: 10px;
     padding: 15px;
     margin: 10px;
     margin-right: 300px;
@@ -111,7 +126,6 @@ header nav ul {
     width: 99vw;
     margin: 0 auto;
     overflow: hidden;
-    background-color: red;
 }
 
 .each-slide > div {
@@ -120,7 +134,7 @@ header nav ul {
     justify-content: center;
     background-size: cover;
     height: 75vh;
-  }
+}
   
 .each-slide span {
     padding: 20px;
@@ -129,7 +143,25 @@ header nav ul {
     text-align: center;
 }
 
-/* ? SignIn Page */
+/* ? Collection Page */
+.game-handler {
+    height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.game-container {
+    padding: 15px;
+    margin: 5px 10px;
+    border: 1px solid black;
+    flex-basis: 300px;
+    max-height: 300px;
+}
+.game-list {
+    list-style-type: none;
+}
+
+/* ? SignIn SignUp Pages */
 .signForm-handler {
     display: flex;
     justify-content: center;
@@ -164,7 +196,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    border-top: 1px solid black;
+    border-top: 3px solid black;
+    background-color: var(--red-accent-);
 }
 
 @media screen and (max-width: 700px) {

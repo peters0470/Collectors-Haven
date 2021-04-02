@@ -24,27 +24,27 @@ const HeroSlider = () => {
         <Slide>
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
-              <span>Gaming Pc</span>
+
             </div>
           </div>
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-              <span>Mario Land</span>
+
             </div>
           </div>
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-              <span>Playstation 4</span>
+
             </div>
           </div>
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
-              <span>Retro</span>
+
             </div>
           </div>
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[4]})`}}>
-              <span>Virtual Reality</span>
+
             </div>
           </div>
         </Slide>

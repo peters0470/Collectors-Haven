@@ -20,8 +20,8 @@ const Nav = () => {
                   Sign In
                 </Link>
               </li>
-              <li>
-                <Link to='/collection'>
+              <li className='nav-elements'>
+                <Link to='/collection' className='link font-color'>
                   Collection
                 </Link>
               </li>
