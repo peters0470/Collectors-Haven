@@ -152,8 +152,32 @@ header nav ul {
     background: #efefef;
     text-align: center;
 }
+/* .img-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid rgba(34, 34, 34, 0.767);
+    border-radius: 2px;
+    width: 200px;
+    height: 75px;
+}
+.pc-img {
+    bottom: 135px;
+    left: 50px;
+    background-color: #007abe;
+    color: white;
+}
+.mario-land {
+    bottom: 250px;
+    right: 150px;
+    background-color: ;
+    color: black;
+    font-size: 24px;
+    font-family: var(--font-family);
+} */
 
-/* ? Collection Page */
+/* ? Collection Page  #c5dfee #81cd67*/
 .game-handler {
     height: 90vh;
     display: flex;
@@ -169,6 +193,33 @@ header nav ul {
 }
 .game-list {
     list-style-type: none;
+}
+    /* * Collection Button */
+.add-games-handler {
+    display: flex;
+    justify-content: flex-end;
+    width: 99vw;
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+}
+.add-games-handler button {
+    outline: none;
+    border: none;
+}
+.plus-icon {
+    color: black;
+    background-color: var(--base-color-);
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 12px;
+    transition: background-color .5s;
+}
+.plus-icon:hover {
+    color: var(--base-color-);
+    background-color: black;
+    transition: background-color .5s;
 }
 
 /* ? SignIn SignUp Pages */

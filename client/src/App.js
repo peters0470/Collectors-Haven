@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -29,12 +28,12 @@ const App = () => {
           <Router>
             <div>
               <Header />
-              <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/signUp' component={SignUp} />
-                <Route exact path='/collection' component={Collection} />
-              </Switch>
+                <Switch>
+                  <Route exact path='/' component={Home} />
+                  <Route exact path='/login' component={Login} />
+                  <Route exact path='/signUp' component={SignUp} />
+                  <Route exact path='/collection' component={Collection} />
+                </Switch>
               <Footer />
             </div>
           </Router>
