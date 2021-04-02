@@ -54,6 +54,10 @@ header nav ul {
     font-family: var(--font-family);
     color: black;
 }
+.font-color:hover {
+    font-family: var(--font-family);
+    color: white;
+}
 
 
 /* ? REVIEWS STYLES */
