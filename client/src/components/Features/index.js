@@ -1,4 +1,13 @@
 import React from 'react'
+import styled from 'styled-components';
+
+const FeatureTitle = styled.h3`
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+`;
 
 const Features = () => {
     const features = [
@@ -23,7 +32,7 @@ const Features = () => {
         {features.map(feature => {
           return (
             <div className={`${feature.class}`}>
-              <h3>{feature.title}</h3>
+              <FeatureTitle>{feature.title}</FeatureTitle>
               <p>
               {feature.desc}
               </p>

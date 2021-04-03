@@ -1,12 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const NavTitle = styled.h1`
+  padding: 3px 10px;
+  border-radius: 5px;
+  background-color: #ff7171;
+  color: #9fd8df;
+  :hover {
+    background-color: black;
+  }
+`;
 
 const Nav = () => {
     return (
         <header>
-          <h1>
+          <NavTitle>
             Collectors Haven
-          </h1>
+          </NavTitle>
 
           <nav>
             <ul>
@@ -28,7 +39,7 @@ const Nav = () => {
             </ul>
           </nav>
         </header>
-    )
-}
+    );
+};
 
 export default Nav
