@@ -1,0 +1,257 @@
+@import "react-slideshow-image/dist/styles.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+
+:root {
+    --font-family: 'Palanquin', sans-serif;
+
+    --base-color-: #f1fffc;
+    --accent-: #f5c0c0;
+    --red-: #ff7171;
+    --pop-: #9fd8df;
+
+    --pd-1-: 5px;
+    --mg-1-: 5px; 
+}
+#root {
+    background-color: var(--base-color-)
+}
+.pm1 {
+    padding: var(--pd-1-);
+    margin: var(--mg-1-);
+}
+
+/* ? HEADER/NAV STYLES */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    background-color: var(--red-);
+}
+header nav {
+    margin: 5px 0;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    
+}
+.nav-elements {
+    padding: 10px 50px;
+    margin: 0 20px;
+    border: 2px solid var(--accent-);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: var(--pop-);
+    color: black;
+}
+.nav-elements:hover {
+    background-color: black;
+    color: var(--pop-);
+}
+.link {
+    text-decoration: none;
+}
+.font-color {
+    font-family: var(--font-family);
+    color: black;
+}
+.font-color:hover {
+    font-family: var(--font-family);
+    color: white;
+}
+
+
+/* ? REVIEWS STYLES */
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 10rem;
+    padding: 20px;
+    padding-bottom: 5px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.container div {
+    border-top: 1px solid black;
+    margin-top: 8px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* ? FEATURES STYLES */
+
+.features-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.feature-container-left {
+    max-width: 800px;
+    min-width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    margin-left: 300px;
+    max-width: 800px;
+}
+.feature-container-right {
+    max-width: 800px;
+    min-width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    margin-right: 300px;
+    text-align: right;
+}
+.feature-container h3 {
+    padding-bottom: 5px;
+}
+.feature-container p {
+    padding-top: 5px;
+}
+
+
+/* ? HERO SLIDER */
+.slide-container {
+    height: 75vh;
+    width: 99vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 75vh;
+}
+  
+.each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+}
+
+
+/* ? Collection Page */
+.game-container {
+    padding: 15px;
+    margin: 5px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    flex-basis: 300px;
+    max-height: 300px;
+    background-color: white;
+}
+.game-list {
+    list-style-type: none;
+}
+    /* * Collection Button */
+.add-games-handler {
+    display: flex;
+    justify-content: flex-end;
+    width: 99vw;
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+}
+.add-games-handler button {
+    outline: none;
+    border: none;
+}
+.plus-icon {
+    color: black;
+    background-color: var(--base-color-);
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 12px;
+    transition: background-color .5s;
+}
+.plus-icon:hover {
+    color: var(--base-color-);
+    background-color: black;
+    transition: background-color .5s;
+}
+
+
+/* ? SignIn SignUp Pages */
+.signForm-handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.signForm-handler form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    font-family: 'Palanquin', sans-serif;
+}
+form input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.sign-btn {
+    padding: 10px 20px;
+}
+
+
+
+/* ? FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    border-top: 3px solid black;
+    background-color: var(--red-);
+}
+
+@media screen and (max-width: 700px) {
+    .features-container {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .feature-container-left {
+        margin-right: 100px;
+    }
+    .feature-container-right {
+        margin-left: 100px;
+    }
+}

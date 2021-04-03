@@ -10,6 +10,22 @@ const FILES_TO_CACHE = [
     "./client/src/App.js",
     "./dist/app.bundle.js",
     "./client/src/index.js",
+    "./client/src/components/Features/index.js",
+    "./client/src/components/Footer/index.js",
+    "./client/src/components/Header/index.js",
+    "./client/src/components/HeroSlider/index.js",
+    "./client/src/components/Modal/index.js",
+    "./client/src/components/ModalButton/index.js",
+    "./client/src/components/ModalContent/index.js",
+    "./client/src/components/Reviews/index.js",
+    "./client/src/pages/Collection.js",
+    "./client/src/pages/Discover.js",
+    "./client/src/pages/Home.js",
+    "./client/src/pages/Login.js",
+    "./client/src/pages/SignUp.js",
+    "./client/src/utils/auth.js",
+
+
 
 ];
 self.addEventListener('install', function (e) {
@@ -39,6 +55,8 @@ self.addEventListener('activate', function (e) {
         })
     );
 });
+
+// return request || fetch(e.request)
 self.addEventListener('fetch', function (e) {
     console.log('fetch request : ' + e.request.url)
     e.respondWith(
@@ -50,9 +68,6 @@ self.addEventListener('fetch', function (e) {
                 console.log('file is not cached, fetching : ' + e.request.url)
                 return fetch(e.request)
             }
-
-            // You can omit if/else for console.log & put one line below like this too.
-            // return request || fetch(e.request)
         })
     )
 })
