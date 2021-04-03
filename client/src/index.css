@@ -15,9 +15,17 @@
     --red-accent-: #f05945;
     --light-blue-accent-: #a3d2ca;
     --dark-blue-accent-: #5eaaa8;
+
+    --pd-1-: 5px;
+
+    --mg-1-: 5px;
 }
 #root {
     background-color: var(--base-color-);
+}
+.pm1 {
+    padding: var(--pd-1-);
+    margin: var(--mg-1-);
 }
 
 /* ? HEADER/NAV STYLES */
@@ -221,6 +229,7 @@ header nav ul {
     background-color: black;
     transition: background-color .5s;
 }
+
 
 /* ? SignIn SignUp Pages */
 .signForm-handler {
