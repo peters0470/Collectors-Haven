@@ -1,7 +1,18 @@
 import React, { useState } from "react";
+import styled from 'styled-components';
+
 import Modal from "../components/Modal";
 import ModalContent from '../components/ModalContent';
 import ModalButton from "../components/ModalButton";
+
+const GameHandler = styled.div`
+  height: 90vh;
+  padding: 25px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #e2e2e2;
+`;
 
 const Collection = () => {
   const videoGames = [
@@ -64,7 +75,7 @@ const Collection = () => {
 
   return (
     <>
-      <div className="game-handler">
+      <GameHandler>
         {videoGames.map((games) => {
           return (
             <div className="game-container">
@@ -78,7 +89,7 @@ const Collection = () => {
             </div>
           );
         })}
-      </div>
+      </GameHandler>
       <div className="add-games-handler">
         <ModalButton handleClick={() => handleOpenModal(true)}>
           Add Game
