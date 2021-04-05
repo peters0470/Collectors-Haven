@@ -59,9 +59,9 @@ npm start
 
 | Name     | Email        | GitHub
 
-| - - - - - - - | - - - - - - - |
 
-| Felix Gutierrez |            | https://github.com/fgutierrez2191
+
+| Felix Gutierrez |      *      | https://github.com/fgutierrez2191
 
 | Sarah McNeel | sdawn8912@gmail.com | https://github.com/Sarah-McNeel 
 
@@ -69,9 +69,9 @@ npm start
 
 | Ryan Peters | peters0470@gmail.com | https://github.com/peters0470
 
-| Ayoub Hammouch |             | https://github.com/Ayoubhm1993
+| Ayoub Hammouch |      *       | https://github.com/Ayoubhm1993
 
-| Chris Podoba |               | https://github.com/christroy 
+| Chris Podoba |        *       | https://github.com/christroy 
 
 
 
