@@ -14,34 +14,38 @@ Built a searchable app, to give the user information about various video games t
 "placeholder"
 
 
-# Deployed Link
-"placeholder"
+# [Deployed Link]( ) 
+
 
 # Technologies Used
-MERN
+>MERN
 
-REACT
+>REACT
 
-GraphQL
+>GraphQL
 
-Node.js & Express.js server
+>Node.js & Express.js server
 
-MongoDB & Mongoose ODM for the database
+>MongoDB & Mongoose ODM for the database
 
-PWA 
+>PWA 
 
-JavaScript
+>JavaScript
 
-Html
+>Html
 
-Css
+>Css
 
-Third-Party Api's
+>Third-Party Api's
 
-Materialize
+>Materialize
+
+
+- - - 
+- - - 
 
 # Contribution
 
-Created by: [Felix Gutierrez, Sarah McNeel, Kevin Simmons, Ryan Peters,Ayoub Hammouch, Chris Podoba]
+*Created by*: [Felix Gutierrez, Sarah McNeel, Kevin Simmons, Ryan Peters,Ayoub Hammouch, Chris Podoba]
 
 
