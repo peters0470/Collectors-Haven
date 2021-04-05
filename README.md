@@ -11,10 +11,19 @@ Built this app to test our Html, Css and Javascript skills. The app also uses th
 Built a searchable app, to give the user information about various video games they might be interested in.
 
 # How To Use
-"placeholder"
+```
+npm install
+
+npm start
+
+```
 
 
 # [Deployed Link]( ) 
+
+
+# Screenshots
+![ ]()
 
 
 # Technologies Used
@@ -46,6 +55,24 @@ Built a searchable app, to give the user information about various video games t
 
 # Contribution
 
-*Created by*: [Felix Gutierrez, Sarah McNeel, Kevin Simmons, Ryan Peters,Ayoub Hammouch, Chris Podoba]
+*Created by*: 
+
+| Name     | Email        | GitHub
+
+| - - - - - - - | - - - - - - - |
+
+| Felix Gutierrez |            | https://github.com/fgutierrez2191
+
+| Sarah McNeel | sdawn8912@gmail.com | https://github.com/Sarah-McNeel 
+
+| Kevin Simmons | simmons5family@gmail.com | https://github.com/climbingryan
+
+| Ryan Peters | peters0470@gmail.com | https://github.com/peters0470
+
+| Ayoub Hammouch |             | https://github.com/Ayoubhm1993
+
+| Chris Podoba |               | https://github.com/christroy 
+
+
 
 
