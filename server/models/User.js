@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 
+
 const userSchema = new Schema(
     {
         username: {
@@ -21,13 +22,9 @@ const userSchema = new Schema(
             required: true,
             minlength: 6
         },
-        collection:[
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Collection'
-            
-        }]
-    },{
+        
+    },
+    {
         toJSON: {
             virtuals: true
         }

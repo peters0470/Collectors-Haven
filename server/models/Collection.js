@@ -23,7 +23,7 @@ const CollectionSchema = new Schema(
     }
 );
 
-thoughtSchema.virtual('itemCount').get(function() {
+CollectionSchema.virtual('itemCount').get(function() {
     return this.items.length;
   });
   
