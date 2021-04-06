@@ -1,6 +1,5 @@
 import React from 'react'
 import image from '../../assets/vector-images/all-tasks-completed.png';
-import styled from 'styled-components';
 
 
 const Hero = () => {

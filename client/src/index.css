@@ -80,11 +80,15 @@ header nav ul {
 }
 
 
-/* ?  HERO STYLES  */
+/*  
+====================
+    ? HERO STYLES  
+====================
+*/
 .hero-handler {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 140px;
 }
 .hero-content {
     display: flex;
@@ -114,12 +118,16 @@ header nav ul {
 
 
 
-/* ? REVIEWS STYLES */
+/*
+=======================
+    ? REVIEWS STYLES
+=======================
+*/
 .reviews-container {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 140px;
 }
 .container {
     display: flex;
@@ -131,7 +139,7 @@ header nav ul {
     padding: 20px;
     padding-bottom: 5px;
     margin: 10px;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 10px;
 }
 .container div {
@@ -141,14 +149,27 @@ header nav ul {
     display: flex;
     align-items: center;
 }
+.purple {
+    border-color: #e05fd4;
+}
+.red {
+    border-color: #e01d61;
+}
+.blue {
+    border-color: #33aafc;
+}
 
-/* ? FEATURES STYLES */
+/*
+=======================
+    ? FEATURES STYLES
+=======================
+*/
 
 .features-container {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
 .feature-container-left {
@@ -156,8 +177,8 @@ header nav ul {
     min-width: 400px;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
+    padding: 25px;
+    margin: 25px 10px;
     margin-left: 300px;
     max-width: 800px;
 }
@@ -166,8 +187,8 @@ header nav ul {
     min-width: 400px;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
+    padding: 25px;
+    margin: 25px 10px;
     margin-right: 300px;
     text-align: right;
 }
@@ -176,6 +197,21 @@ header nav ul {
 }
 .feature-container p {
     padding-top: 5px;
+}
+.feature-title {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+.feature-purple {
+    box-shadow: 5px 5px #e01d61;
+}
+.feature-red {
+    box-shadow: 5px 5px #e05fd4;
+}
+.feature-blue {
+    box-shadow: 5px 5px #33aafc;
 }
 
 
