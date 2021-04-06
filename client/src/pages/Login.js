@@ -1,65 +1,46 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import styled from "styled-components";
 
-
-
-
-
+import LoginForm from "../components/Login-Signup/LoginForm";
+import SignUpForm from "../components/Login-Signup/SignUpForm";
 
 const Login = (props) => {
-  const [formState, setFormState] = useState({ username: '', password: '' });
+  const SignFormsHandler = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+  `;
+  const FormHandler = styled.div`
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+  `;
+  const PageSplit = styled.div`
+    height: 100%;
+    width: 10px;
+    border-right: 1px solid #ff717100;
+    border-left: 1px solid #ff717100;
+    background-color: #ff7171;
+  `;
 
-  // update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
-  // submit form
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    // clear form values
-    setFormState({
-      username: '',
-      password: '',
-    });
-  };
   return (
-    <div className='signForm-handler'>
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label htmlFor='username'>Username: </label>
-          <input
-            placeholder="Username here"
-            type="username"
-            name="username"
-            id="username"
-            value={formState.email}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor='pwd'>Password: </label>
-          <input
-            placeholder="Password here"
-            type="password"
-            name="password"
-            id="pwd"
-            value={formState.password}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <button className='sign-btn'>Sign In</button>
-        <Link to="signUp">Sign-Up Here</Link>
-      </form>
-    </div>
+    <SignFormsHandler>
+
+      <FormHandler>
+        <h2 className='sign-title'>Sign Up</h2>
+        <SignUpForm />
+      </FormHandler>
+
+      <PageSplit></PageSplit>
+
+      <FormHandler>
+        <h2 className='sign-title'>Log In</h2>
+        <LoginForm />
+      </FormHandler>
+
+    </SignFormsHandler>
   );
 };
-
 
 export default Login;

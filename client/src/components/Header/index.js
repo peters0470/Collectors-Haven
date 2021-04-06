@@ -28,7 +28,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link to='/login' className='link nav-elements'>
-                  Sign In
+                  Log In
                 </Link>
               </li>
               <li>
