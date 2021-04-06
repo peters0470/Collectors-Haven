@@ -27,12 +27,12 @@ const Nav = () => {
                 </Link>
               </li>
               <li>
-                <Link to='/login' className='link nav-elements'>
+                <Link to='/login' className='nav-elements'>
                   Log In
                 </Link>
               </li>
               <li>
-                <Link to='/collection' className='link nav-elements'>
+                <Link to='/collection' className='nav-elements'>
                   Collection
                 </Link>
               </li>
