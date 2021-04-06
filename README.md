@@ -61,7 +61,7 @@ npm start
 
 
 
-| Felix Gutierrez |      *      | https://github.com/fgutierrez2191
+| Felix Gutierrez | fgutierrez2191@icloud.com | https://github.com/fgutierrez2191
 
 | Sarah McNeel | sdawn8912@gmail.com | https://github.com/Sarah-McNeel 
 
@@ -71,7 +71,7 @@ npm start
 
 | Ayoub Hammouch |      *       | https://github.com/Ayoubhm1993
 
-| Chris Podoba |        *       | https://github.com/christroy 
+| Chris Podoba | Chrispodoba@Gmail.com | https://github.com/christroy 
 
 
 
