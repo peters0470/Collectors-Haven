@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <h2>
+      <h2 style={{ fontFamily: 'Quicksand', }}>
         Made By:
         <a
           href="https://github.com/climbingryan"

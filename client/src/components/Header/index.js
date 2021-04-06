@@ -21,7 +21,7 @@ const Nav = () => {
             Collectors Haven
           </NavTitle>
 
-          <nav>
+          <nav style={{ fontFamily: 'QuickSand' }}>
             <ul>
               <li className=''>
                 <Link to='/' className='nav-elements'>

@@ -70,11 +70,11 @@ header nav ul {
     text-decoration: none;
 }
 .font-color {
-    font-family: var(--font-family-content);
+    font-family: var(--font-family-header);
     color: black;
 }
 .font-color:hover {
-    font-family: var(--font-family-content);
+    font-family: var(--font-family-header);
     color: white;
 }
 
