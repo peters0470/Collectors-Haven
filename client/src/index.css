@@ -38,7 +38,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px 25px;
-    background-color: var(--red-);  
+    background-color: var(--base-color-);  
 }
 header nav {
     margin: 5px 0;
@@ -54,18 +54,17 @@ header nav ul {
 .nav-elements {
     padding: 10px 50px;
     margin: 0 20px;
-    border: 2px solid var(--green-accent-);
     border-radius: 5px;
     font-size: 18px;
     font-weight: bolder;
-    background-color: var(--green-);
+    background-color: var(--base-color-);
     color: black;
     text-decoration: none;
 }
 .nav-elements:hover {
-    border: 1px solid var(--green-);
-    background-color: black;
-    color: var(--pop-);
+    background-color: #ffb83d;
+    color: black;
+    border: 1px solid black;
 }
 .link {
     text-decoration: none;

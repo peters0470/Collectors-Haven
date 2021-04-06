@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavTitle = styled.h1`
-  padding: 3px 10px;
+  margin: 0;
+  padding: 5px 10px;
   border-radius: 5px;
-  background-color: #ff7171;
-  color: #9fd8df;
+  background-color: #f1fffc;
+  color: black;
+  font-family: 'Quicksand', sans-serif;
   :hover {
-    background-color: black;
+    background-color: #ff7171;
   }
 `;
 
@@ -22,7 +24,7 @@ const Nav = () => {
           <nav>
             <ul>
               <li className=''>
-                <Link to='/' className='link nav-elements'>
+                <Link to='/' className='nav-elements'>
                   Home
                 </Link>
               </li>
