@@ -22,7 +22,12 @@ const userSchema = new Schema(
             required: true,
             minlength: 6
         },
-        
+        collections: [
+          {
+          type: Schema.Types.ObjectId,
+          ref: 'Collection'
+          }
+        ]
     },
     {
         toJSON: {

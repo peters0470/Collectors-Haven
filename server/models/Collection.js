@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const ItemSchema = require('./Item')
 
-const CollectionSchema = new Schema(
+const collectionSchema = new Schema(
     {
        name: {
            type: String,
@@ -23,10 +23,10 @@ const CollectionSchema = new Schema(
     }
 );
 
-CollectionSchema.virtual('itemCount').get(function() {
+collectionSchema.virtual('itemCount').get(function() {
     return this.items.length;
   });
   
-  const Collection = model('Collection', CollectionSchema);
+  const Collection = model('Collection', collectionSchema);
   
   module.exports = Collection;

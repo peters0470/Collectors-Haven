@@ -11,7 +11,7 @@ const typeDefs = gql`
 
   type Item {
     _id: ID
-    name: String
+    itemname: String
     description: String
     condition: String
     priceBought: Int
@@ -30,13 +30,13 @@ const typeDefs = gql`
   type Query {
     me: User
     collections(name: String): [Collection]
-    item(name: String):[Item]
+    items(name: String):[Item]
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addItem(name: String!, description: String!,condition: String!, priceBought: String!  ): Collection
+    addItem(itemname: String!, description: String!,condition: String!, priceBought: String!  ): Collection
     addCollection(name: String!): Collection
   }
 `;
