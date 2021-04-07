@@ -22,7 +22,7 @@ const Nav = () => {
           </NavTitle>
 
           <nav style={{ fontFamily: 'QuickSand' }}>
-            <ul>
+            <ul className='nav-list'>
               <li className=''>
                 <Link to='/' className='nav-elements'>
                   Home
