@@ -4,35 +4,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@apollo/client": "^3.3.13",
->>>>>>> cab0d542de32e4e8bff8d6e06b0330c28bd84f8b
     "@apollo/react-hooks": "^4.0.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "apollo-boost": "^0.4.9",
-<<<<<<< HEAD
-=======
     "apollo-server-express": "^2.22.2",
     "framer-motion": "^4.1.2",
->>>>>>> cab0d542de32e4e8bff8d6e06b0330c28bd84f8b
     "graphql": "^15.5.0",
     "graphql-tag": "^2.11.0",
     "jwt-decode": "^3.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-<<<<<<< HEAD
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-=======
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-slideshow-image": "^3.4.5",
     "styled-components": "^5.2.3",
->>>>>>> cab0d542de32e4e8bff8d6e06b0330c28bd84f8b
     "web-vitals": "^1.1.1"
   },
   "scripts": {

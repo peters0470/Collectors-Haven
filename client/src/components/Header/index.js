@@ -13,33 +13,33 @@ const NavTitle = styled.h1`
 `;
 
 const Nav = () => {
-    return (
-        <header>
-          <NavTitle>
-            Collectors Haven
+  return (
+    <header>
+      <NavTitle>
+        Collectors Haven
           </NavTitle>
 
-          <nav>
-            <ul>
-              <li className=''>
-                <Link to='/' className='link nav-elements'>
-                  Home
+      <nav>
+        <ul>
+          <li className=''>
+            <Link to='/' className='link nav-elements'>
+              Home
                 </Link>
-              </li>
-              <li>
-                <Link to='/login' className='link nav-elements'>
-                  Sign In
+          </li>
+          <li>
+            <Link to='/login' className='link nav-elements'>
+              Sign In
                 </Link>
-              </li>
-              <li>
-                <Link to='/collection' className='link nav-elements'>
-                  Collection
+          </li>
+          <li>
+            <Link to='/collection' className='link nav-elements'>
+              Collection
                 </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-    );
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
 export default Nav

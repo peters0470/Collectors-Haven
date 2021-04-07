@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-=======
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
->>>>>>> cab0d542de32e4e8bff8d6e06b0330c28bd84f8b
 
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -28,29 +23,24 @@ const client = new ApolloClient({
 })
 
 const App = () => {
-    return (
-        <ApolloProvider client={client}>
-          <Router>
-            <div>
-              <Header />
-                <Switch>
-                  <Route exact path='/' component={Home} />
-                  <Route exact path='/login' component={Login} />
-                  <Route exact path='/signUp' component={SignUp} />
-                  <Route exact path='/collection' component={Collection} />
-                </Switch>
-              <Footer />
-            </div>
-          </Router>
-        </ApolloProvider>
-    )
-<<<<<<< HEAD
-
-};
-=======
+  return (
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/signUp' component={SignUp} />
+            <Route exact path='/collection' component={Collection} />
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </ApolloProvider>
+  )
 }
 
 export default App
 
 
->>>>>>> cab0d542de32e4e8bff8d6e06b0330c28bd84f8b

@@ -25,24 +25,24 @@ const HeroSlider = () => {
     duration: 5000,
     transitionDuration: 500,
     infinite: true,
-    prevArrow: <FaArrowLeft style={{ position: 'absolute', left: '50px', zIndex: 12, color: 'white' }} size='42px'/>,
-    nextArrow: <FaArrowRight style={{ position: 'absolute', left: '1825px', zIndex: 12, color: 'white' }} size='42px'/>,
+    prevArrow: <FaArrowLeft style={{ position: 'absolute', left: '50px', zIndex: 12, color: 'white' }} size='42px' />,
+    nextArrow: <FaArrowRight style={{ position: 'absolute', left: '1825px', zIndex: 12, color: 'white' }} size='42px' />,
   }
 
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          <Slide {...properties}>
-            {slideImages.map((each, index) => (
-              <div key={index} className="each-slide">
-                <div style={{ backgroundImage: `url(${each})` }}>
-                </div>
+        <Slide {...properties}>
+          {slideImages.map((each, index) => (
+            <div key={index} className="each-slide">
+              <div style={{ backgroundImage: `url(${each})` }}>
               </div>
-            ))}
-          </Slide>
-        </div>
+            </div>
+          ))}
+        </Slide>
       </div>
-    )
+    </div>
+  )
 }
 // <img src={require('/images/image-name.png')} /> r
 export default HeroSlider
