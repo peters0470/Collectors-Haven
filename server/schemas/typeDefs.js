@@ -38,6 +38,8 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     addItem(itemname: String!, description: String!,condition: String!, priceBought: String!  ): Collection
     addCollection(name: String!): Collection
+  
+    addUser(username: String!, email: String!, password: String!): Auth
   }
 `;
 

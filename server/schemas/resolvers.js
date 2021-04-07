@@ -13,6 +13,7 @@ const resolvers = {
             }
             throw new AuthenticationError('Not Logged In');
         },
+        
         collections: async(parent, { name }) => {
             const params = name ? { name } : {};
             return Collection.find(params).sort({ createdAt: -1 })
@@ -25,6 +26,7 @@ const resolvers = {
             
              return { token, user };
             },
+
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
@@ -41,6 +43,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
           },
+
           addItem: async (parent, { itemname, description, condition, priceBought}, context) =>{
               if(context.user){
                   const updatedItem = await Collection.findOneAndUpdate(
@@ -70,5 +73,4 @@ const resolvers = {
 };
 
 
-module.exports = resolvers; 
-
+module.exports = resolvers;
