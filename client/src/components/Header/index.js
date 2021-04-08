@@ -4,13 +4,13 @@ import styled from 'styled-components';
 
 const NavTitle = styled.h1`
   margin: 0;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 5px;
   background-color: #f1fffc;
   color: black;
   font-family: 'Quicksand', sans-serif;
   :hover {
-    background-color: #ff7171;
+    background-color: #e01d61;
   }
 `;
 

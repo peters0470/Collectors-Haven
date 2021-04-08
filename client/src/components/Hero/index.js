@@ -17,9 +17,7 @@ const Hero = () => {
               mollit anim id est laborum.
             </p>
           </div>
-          <div className='hero-handler'>
-            <img className='img' src={image} alt='vector'></img>
-          </div>
+          <img className='img' src={image} alt='vector'></img>
         </div>
     )
 }

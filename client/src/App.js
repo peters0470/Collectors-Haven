@@ -6,6 +6,7 @@ import ApolloClient from 'apollo-boost';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 import Collection from './pages/Collection';
 import Footer from './components/Footer';
 
@@ -30,6 +31,7 @@ const App = () => {
                 <Switch>
                   <Route exact path='/' component={Home} />
                   <Route exact path='/login' component={Login} />
+                  <Route exact path='/signup' component={SignUp} />
                   <Route exact path='/collection' component={Collection} />
                 </Switch>
               <Footer />

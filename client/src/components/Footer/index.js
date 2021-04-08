@@ -34,7 +34,7 @@ const Footer = () => {
           className="link font-color"
         > Sarah </a>
       </h2>
-      <p>&copy; 2021 Collectors Haven, Inc.</p>
+      <p style={{ fontFamily: 'Quicksand' }}>&copy; 2021 Collectors Haven, Inc.</p>
     </footer>
   );
 };

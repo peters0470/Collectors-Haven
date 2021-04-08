@@ -8,6 +8,7 @@ const ModalHandler = styled.div`
   flex-flow: column wrap;
   justify-content: space-evenly;
   align-items: center;
+  font-family: Quicksand;
 `;
   // Form component, holds all labels & inputs 
 const GameForm = styled.form`
@@ -72,6 +73,7 @@ const ModalContent = () => {
               ></input>
             </InputHandler>
           </GameForm>
+          <button>Add Game</button>
         </ModalHandler>
     )
 }

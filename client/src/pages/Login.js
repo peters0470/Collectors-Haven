@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
-import LoginForm from "../components/Login-Signup/LoginForm";
-import SignUpForm from "../components/Login-Signup/SignUpForm";
+import image from '../assets/vector-images/Coming-Soon.png'
+
+import LoginForm from "../components/LoginForm";
 
 const Login = (props) => {
   const SignFormsHandler = styled.div`
@@ -11,34 +13,16 @@ const Login = (props) => {
     align-items: center;
     height: 90vh;
   `;
-  const FormHandler = styled.div`
-    display: flex;
-    flex-flow: column wrap;
-    text-align: center;
-  `;
-  const PageSplit = styled.div`
-    height: 100%;
-    width: 10px;
-    border-right: 1px solid #ff717100;
-    border-left: 1px solid #ff717100;
-    background-color: #ff7171;
-  `;
+
 
   return (
     <SignFormsHandler>
-
-      <FormHandler>
-        <h2 className='sign-title'>Sign Up</h2>
-        <SignUpForm />
-      </FormHandler>
-
-      <PageSplit></PageSplit>
-
-      <FormHandler>
+      <img className='login-img' src={image} alt='vector illustration'></img>
+      <div className='login-form-handler'>
         <h2 className='sign-title'>Log In</h2>
         <LoginForm />
-      </FormHandler>
-
+        <p style={{ fontFamily:'Quicksand' }}>Don't have an Account?<Link className='link-signup' to='/signup'> Sign up</Link></p>
+      </div>
     </SignFormsHandler>
   );
 };

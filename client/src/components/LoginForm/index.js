@@ -5,10 +5,11 @@ const Form = styled.div`
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-content: space-evenly;
   border: 1px solid black;
-  border-radius: 10px;
-  height: 200px;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  height: 300px;
   width: 400px;
   font-family: "Palanquin", sans-serif;
 `;
