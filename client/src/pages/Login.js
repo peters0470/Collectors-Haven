@@ -1,65 +1,32 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link } from 'react-router-dom';
+import styled from "styled-components";
 
+import image from '../assets/vector-images/Coming-Soon.png'
 
-
-
-
+import LoginForm from "../components/LoginForm";
 
 const Login = (props) => {
-  const [formState, setFormState] = useState({ username: '', password: '' });
+  const SignFormsHandler = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+    margin-bottom: 100px;
+  `;
 
-  // update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
 
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
-  // submit form
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    // clear form values
-    setFormState({
-      username: '',
-      password: '',
-    });
-  };
   return (
-    <div className='signForm-handler'>
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label htmlFor='username'>Username: </label>
-          <input
-            placeholder="Username here"
-            type="username"
-            name="username"
-            id="username"
-            value={formState.email}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor='pwd'>Password: </label>
-          <input
-            placeholder="Password here"
-            type="password"
-            name="password"
-            id="pwd"
-            value={formState.password}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <button className='sign-btn'>Sign In</button>
-        <Link to="signUp">Sign-Up Here</Link>
-      </form>
-    </div>
+    <SignFormsHandler>
+      <img className='login-img' src={image} alt='vector illustration'></img>
+      <div className='login-form-handler'>
+        <h2 className='sign-title'>Log In</h2>
+        <LoginForm />
+        <p style={{ fontFamily:'Quicksand' }}>Don't have an Account?<Link className='link-signup' to='/signup'> Sign up</Link></p>
+      </div>
+    </SignFormsHandler>
   );
 };
-
 
 export default Login;
