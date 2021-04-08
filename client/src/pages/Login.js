@@ -9,9 +9,11 @@ import LoginForm from "../components/LoginForm";
 const Login = (props) => {
   const SignFormsHandler = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     height: 90vh;
+    margin-bottom: 100px;
   `;
 
 
