@@ -25,6 +25,8 @@
     "concurrently": "^6.0.0"
   },
   "dependencies": {
-    "if-env": "^1.0.4"
+    "@apollo/react-hooks": "^4.0.0",
+    "if-env": "^1.0.4",
+    "react-bootstrap": "^1.5.2"
   }
 }

@@ -1,15 +1,6 @@
 import gql from 'graphql-tag';
 
-export const LOGIN = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      token
-      user {
-        _id
-      }
-    }
-  }
-`;
+
 
 export const ADD_ITEM = gql`
   mutation addItem($collection: [ID]!) {
@@ -19,8 +10,8 @@ export const ADD_ITEM = gql`
         description
         condition
         priceBought
-      } 
-      }
+      
+      
     }
   }
 `;
@@ -42,5 +33,17 @@ export const ADD_COLLECTION = gql`
     addCollection(name: $name) {
         name
     }    
+  }
+`;
+
+export const LOGIN_USER = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
   }
 `;
