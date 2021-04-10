@@ -1,71 +1,105 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import {Form, Button, Alert } from 'react-bootstrap';
 
-const Form = styled.div`
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  border: 1px solid black;
-  margin-bottom: 10px;
-  justify-content: space-evenly;
-  border-radius: 5px;
-  height: 300px;
-  width: 400px;
-  font-family: "Palanquin", sans-serif;
-`;
+import { useHistory } from "react-router-dom";
+import Auth from '../../utils/auth';
+import { useMutation } from '@apollo/react-hooks';
+import { LOGIN_USER } from '../../utils/mutations';
+
+
+
 
 const LoginForm = () => {
-  const [formState, setFormState] = useState({ username: "", password: "" });
+  let history = useHistory();
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  
 
-  // update state based on form input changes
-  const handleChange = (event) => {
+  const handleInputChange = (event) => {
     const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
+    setUserFormData({ ...userFormData, [name]: value });
   };
 
-  // submit form
+  const [loginUser,{ loading }]=useMutation(LOGIN_USER,{
+    update(proxy, result){
+      console.log(result);
+      
+      console.log('login sucess')
+      
+    },
+    onError(err){
+     setShowAlert(true)
+    },
+    variables: userFormData
+  });
+
+
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    
+   
+    
+    try {
+      const { data } = await loginUser({
+        variables: { ...userFormData}
+      });
 
-    // clear form values
-    setFormState({
-      username: "",
-      password: "",
-    });
+        Auth.login(data.login.token);
+        history.push('/');
+      
+
+      
+    }  catch (err) {
+      console.error(err);
+      setShowAlert(true);
+    }
+
+    
+    
   };
 
   return (
-    <Form onSubmit={handleFormSubmit}>
-      <div>
-        <label htmlFor="username">Username: </label>
-        <input
-          className="sign-input"
-          placeholder="Username here"
-          type="username"
-          name="username"
-          id="username"
-          value={formState.email}
-          onChange={handleChange}
-        ></input>
-      </div>
-      <div>
-        <label htmlFor="pwd">Password: </label>
-        <input
-          className="sign-input"
-          placeholder="Password here"
-          type="password"
-          name="password"
-          id="pwd"
-          value={formState.password}
-          onChange={handleChange}
-        ></input>
-      </div>
-      <button className="sign-btn">Sign In</button>
-    </Form>
+    <>
+
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit} className='form'>
+        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+          Something went wrong with your login credentials!
+        </Alert>
+        <Form.Group>
+          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your email'
+            name='email'
+            onChange={handleInputChange}
+            value={userFormData.email}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Control
+            type='password'
+            placeholder='Your password'
+            name='password'
+            onChange={handleInputChange}
+            value={userFormData.password}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+        </Form.Group>
+        <Button
+          disabled={!(userFormData.email && userFormData.password)}
+          type='submit'
+          variant='outline-success'>
+          Submit
+        </Button>
+      </Form>
+    </>
   );
 };
 

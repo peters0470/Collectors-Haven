@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Auth from '../../utils/auth';
 
 const NavTitle = styled.h1`
   margin: 0;
@@ -15,6 +16,12 @@ const NavTitle = styled.h1`
 `;
 
 const Nav = () => {
+
+  const logout = event => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
     return (
         <header>
           <NavTitle>
@@ -29,14 +36,27 @@ const Nav = () => {
                 </Link>
               </li>
               <li>
+                {Auth.loggedIn() ? (
+                  <>
+               <Link to='/' className='nav-elements' onClick={logout}>
+                    Logout
+               </Link>
+                 <Link to='/collection' className='nav-elements'>
+                  Collection
+                </Link>
+                </>
+                ) : (
+                  <>
                 <Link to='/login' className='nav-elements'>
                   Log In
                 </Link>
-              </li>
+                </>
+                
+                )}
+                </li>
+              
               <li>
-                <Link to='/collection' className='nav-elements'>
-                  Collection
-                </Link>
+                
               </li>
             </ul>
           </nav>
