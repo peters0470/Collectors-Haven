@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router , Route, Switch } from 'react-router-dom';
@@ -25,6 +25,51 @@ const client = new ApolloClient({
 })
 
 const App = () => {
+  
+  const developers= [
+    {
+      id:'1',
+      name:'Kevin',
+      linkedin:'#',
+      github:'https://github.com/climbingryan'
+      
+    },
+    {
+      id:'2',
+      name:'Rayan',
+      linkedin:'#',
+      github:'https://github.com/peters0470'
+      
+    },
+    {
+      id:'3',
+      name:'Sarah',
+      linkedin:'#',
+      github:'https://github.com/Sarah-McNeel'
+     
+    },
+    {
+      id:'4',
+      name:'Ayoub',
+      linkedin:'#',
+      github:'https://github.com/Ayoubhm1993'
+      
+    },
+    {
+      id:'5',
+      name:'Felix',
+      linkedin:'#',
+      github:'https://github.com/fgutierrez2191'
+      
+    },
+    {
+      id:'6',
+      name:'Chris',
+      linkedin:'#',
+      github:'https://github.com/christroy'
+     
+    }
+  ];
     return (
         <ApolloProvider client={client}>
           <Router >
@@ -36,7 +81,7 @@ const App = () => {
                   <Route exact path='/signup' component={SignUp} />
                   <Route exact path='/collection' component={Collection} />
                 </Switch>
-              <Footer />
+              <Footer developers={developers} />
             </div>
           </Router>
         </ApolloProvider>
