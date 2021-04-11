@@ -36,8 +36,8 @@ const App = () => {
     },
     {
       id:'2',
-      name:'Rayan',
-      linkedin:'#',
+      name:'Ryan',
+      linkedin:'https://www.linkedin.com/in/ryan-peters-482747112/',
       github:'https://github.com/peters0470'
       
     },
