@@ -373,6 +373,31 @@ footer {
     padding: 50px;
     background-color: var(--red-);
 }
+.dev-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.dev-info-container{
+    margin-right: 4vh;
+    margin: 2vh;
+}
+.dev-img {
+    height:8vh;
+    width:8vh;
+    border-radius: 100px;
+}
+.linkedin-icon{
+    height: 4vh;
+    width:4vh ;
+    margin: 0.5vh;
+}
+.dev-name{
+    font-size: 1.3rem;
+    font-family: quicksand;
+}
+
 
 @media screen and (max-width: 717px) {
     .nav-list {
