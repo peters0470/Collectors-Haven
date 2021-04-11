@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@300;400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
-=======
-  <head>
-    <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@300;400&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
->>>>>>> cab0d542de32e4e8bff8d6e06b0330c28bd84f8b
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
@@ -40,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;800&family=Karla:ital,wght@0,700;1,400&display=swap"
     rel="stylesheet">
-  <title>Deep Thoughts</title>
+  <title>Collectors Haven</title>
 </head>
 
 <body>
@@ -56,15 +42,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script>
+    (function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("../service-worker.js")
+          .then(() => console.log("Service Worker registered successfully."))
+          .catch(error => console.log("Service Worker registration failed:", error));
+      }
+    })();
+  </script>
 </body>
-<script>
-  (function () {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./service-worker.js")
-        .then(() => console.log("Service Worker registered successfully."))
-        .catch(error => console.log("Service Worker registration failed:", error));
-    }
-  })();
-</script>
+
 
 </html>

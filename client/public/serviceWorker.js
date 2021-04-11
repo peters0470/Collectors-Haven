@@ -1,4 +1,3 @@
-navigator.serviceWorker.register("./service-worker.js")
 const APP_PREFIX = 'Group-Project3';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
@@ -32,7 +31,7 @@ const FILES_TO_CACHE = [
 ];
 
 // Respond with cached resources
-self.addEventListener('fetch', function (e) {
+window.self.addEventListener('fetch', function (e) {
     console.log('fetch request : ' + e.request.url)
     e.respondWith(
         caches.match(e.request).then(function (request) {
@@ -45,10 +44,10 @@ self.addEventListener('fetch', function (e) {
             }
         })
     )
-})
+});
 
 // Cache resources
-self.addEventListener('install', function (e) {
+window.self.addEventListener('install', function (e) {
     e.waitUntil(
         caches.open(CACHE_NAME).then(function (cache) {
             console.log('installing cache : ' + CACHE_NAME)
@@ -58,7 +57,7 @@ self.addEventListener('install', function (e) {
 })
 
 // Delete outdated caches
-self.addEventListener('activate', function (e) {
+window.self.addEventListener('activate', function (e) {
     e.waitUntil(
         caches.keys().then(function (keyList) {
             // `keyList` contains all cache names under your username.github.io
