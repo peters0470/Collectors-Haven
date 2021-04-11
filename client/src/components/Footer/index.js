@@ -27,6 +27,7 @@ const Footer = () => {
           target="_none"
           className="link font-color"
         > Chris </a>
+        ,
         <a
           href="https://github.com/Ayoubhm1993"
           target="_none"
