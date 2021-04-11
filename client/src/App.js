@@ -58,7 +58,7 @@ const App = () => {
     {
       id:'5',
       name:'Felix',
-      linkedin:'#',
+      linkedin:'https://www.linkedin.com/in/felix-gutierrez91/',
       github:'https://github.com/fgutierrez2191'
       
     },
