@@ -11,7 +11,7 @@ const GameHandler = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  background-color: #e2e2e2;
+  background-color: #f1fffc;
 `;
 
 const Collection = () => {
@@ -79,12 +79,12 @@ const Collection = () => {
         {videoGames.map((games) => {
           return (
             <div className="game-container">
-              <h2>Name: {games.name}</h2>
+              <h2>{games.name}</h2>
               <ul className="game-list">
-                <li>Category: {games.category}</li>
-                <li>Rating: {games.rating}</li>
-                <li>Publisher: {games.publisher}</li>
-                <li>Developer: {games.developer}</li>
+                <li className='collection-item'>Category: {games.category}</li>
+                <li className='collection-item'>Rating: {games.rating}</li>
+                <li className='collection-item'>Publisher: {games.publisher}</li>
+                <li className='collection-item'>Developer: {games.developer}</li>
               </ul>
             </div>
           );

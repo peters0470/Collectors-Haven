@@ -1,12 +1,13 @@
 import React from 'react';
+
+import Hero from '../components/Hero'
 import Reviews from '../components/Reviews'
 import Features from '../components/Features';
-import HeroSlider from '../components/HeroSlider';
 
 const Home = () => {
     return (
         <div>
-          <HeroSlider  />
+          <Hero />
           <Reviews />
           <Features />
         </div>
