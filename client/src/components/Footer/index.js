@@ -32,8 +32,8 @@ const Footer = (props) => {
       <h1 className='dev-name'>{developer.name}</h1>
       <img src={photos[i]} alt={developer.name} className='dev-img' key={developer.id} />
       </div>
-      <a href={developer.linkedin} alt='linkedin'><img src={linkedinIcons}  key={developer.id} alt='linkedin' className='linkedin-icon'/></a>
-      <a href={developer.github} alt='github'><img src={githubIcons} alt='github' key={developer.id} className='linkedin-icon'/></a>
+      <a href={developer.linkedin} alt='linkedin' target='_blank'><img src={linkedinIcons}  key={developer.id} alt='linkedin' className='linkedin-icon'/></a>
+      <a href={developer.github} alt='github' target='_blank'><img src={githubIcons} alt='github' key={developer.id} className='linkedin-icon'/></a>
      
    </div>
      
