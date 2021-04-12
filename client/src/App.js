@@ -70,6 +70,7 @@ const App = () => {
      
     }
   ];
+ 
     return (
         <ApolloProvider client={client}>
           <Router >
@@ -79,7 +80,7 @@ const App = () => {
                   <Route exact path='/' component={Home} />
                   <Route exact path='/login' component={Login} />
                   <Route exact path='/signup' component={SignUp} />
-                  <Route exact path='/collection' component={Collection} />
+                  <Route exact path='/collection' component={Collection}  />
                 </Switch>
               <Footer developers={developers} />
             </div>

@@ -275,6 +275,10 @@ header nav {
     background: #efefef;
     text-align: center;
 }
+.collection-container{
+    height: 100vh;
+    width: 100%;
+}
 
 
 /* ? Collection Page */
@@ -284,7 +288,7 @@ header nav {
     border: 1px solid black;
     border-radius: 10px;
     flex-basis: 300px;
-    max-height: 350px;
+    
     background-color: white;
     display: flex;
     /* flex-flow: column wrap; */
@@ -293,6 +297,7 @@ header nav {
     align-items: center;
     font-family: var(--font-family-header);
 }
+
 .collection-item {
     padding: 5px 0;
 }
