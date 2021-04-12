@@ -51,7 +51,7 @@ const App = () => {
     {
       id:'4',
       name:'Ayoub',
-      linkedin:'#',
+      linkedin:'https://www.linkedin.com/in/ayoub-hammouch-aa9a701b6/',
       github:'https://github.com/Ayoubhm1993'
       
     },
@@ -70,6 +70,7 @@ const App = () => {
      
     }
   ];
+ 
     return (
         <ApolloProvider client={client}>
           <Router >
@@ -79,7 +80,7 @@ const App = () => {
                   <Route exact path='/' component={Home} />
                   <Route exact path='/login' component={Login} />
                   <Route exact path='/signup' component={SignUp} />
-                  <Route exact path='/collection' component={Collection} />
+                  <Route exact path='/collection' component={Collection}  />
                 </Switch>
               <Footer developers={developers} />
             </div>

@@ -9,7 +9,7 @@ import photo1 from '../../assets/dev-img/1.jpg'
 import photo2 from '../../assets/dev-img/2.jpg'
 import photo3 from '../../assets/dev-img/3.JPG'
 import photo4 from '../../assets/dev-img/4.jpg'
-import photo5 from '../../assets/dev-img/5.jpg'
+import photo5 from '../../assets/dev-img/5.jpeg'
 
 const Footer = (props) => {
   
