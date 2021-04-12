@@ -6,7 +6,7 @@ import ModalContent from '../components/ModalContent';
 import ModalButton from "../components/ModalButton";
 
 const GameHandler = styled.div`
-  height: 90vh;
+  height: 150%;
   padding: 25px;
   display: flex;
   justify-content: flex-start;
@@ -86,7 +86,7 @@ const Collection = () => {
         {videoGames.map((games) => {
           return (
             <div className="game-container">
-              <img src = {games.image} style = {{width:"100%"}}/>
+              <img src = {games.image} style = {{width:"100%"}} />
               <h2>{games.name}</h2>
               <ul className="game-list">
                 <li className='collection-item'>Category: {games.category}</li>
@@ -99,7 +99,7 @@ const Collection = () => {
         })}
       </GameHandler>
       <div className="add-games-handler">
-        <ModalButton handleClick={() => handleOpenModal(true)}>
+        <ModalButton className="add-game-button" handleClick={() => handleOpenModal(true)}>
           Add Game
         </ModalButton>
       </div>
