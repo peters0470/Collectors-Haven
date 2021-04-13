@@ -1,45 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Auth from '../../utils/auth';
 
 const NavTitle = styled.h1`
-  padding: 3px 10px;
+  margin: 0;
+  padding: 5px 5px;
   border-radius: 5px;
-  background-color: #ff7171;
-  color: #9fd8df;
+  background-color: #f1fffc;
+  color: black;
+  font-family: 'Quicksand', sans-serif;
   :hover {
-    background-color: black;
+    background-color: #e01d61;
   }
 `;
 
 const Nav = () => {
-  return (
-    <header>
-      <NavTitle>
-        Collectors Haven
+
+  const logout = event => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
+    return (
+        <header>
+          <NavTitle>
+            Collectors Haven
           </NavTitle>
 
-      <nav>
-        <ul>
-          <li className=''>
-            <Link to='/' className='link nav-elements'>
-              Home
+          <nav style={{ fontFamily: 'QuickSand' }}>
+            <ul className='nav-list'>
+              <li className=''>
+                <Link to='/' className='nav-elements'>
+                  Home
                 </Link>
-          </li>
-          <li>
-            <Link to='/login' className='link nav-elements'>
-              Sign In
+              </li>
+              <li>
+                {Auth.loggedIn() ? (
+                  <>
+               <Link to='/' className='nav-elements' onClick={logout}>
+                    Logout
+               </Link>
+                 <Link to='/collection' className='nav-elements'>
+                  Collection
                 </Link>
-          </li>
-          <li>
-            <Link to='/collection' className='link nav-elements'>
-              Collection
+                </>
+                ) : (
+                  <>
+                <Link to='/login' className='nav-elements'>
+                  Log In
                 </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  );
+                </>
+                
+                )}
+                </li>
+              
+              <li>
+                
+              </li>
+            </ul>
+          </nav>
+        </header>
+    );
 };
 
 export default Nav

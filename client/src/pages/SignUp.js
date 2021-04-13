@@ -1,51 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
+import styled from 'styled-components';
+import SignUpForm from '../components/SignUpForm';
+
+import image from '../assets/vector-images/broken-link.png';
+
+const SignFormsHandler = styled.div`
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+  margin-bottom: 100px;
+`;
 
 const SignUp = () => {
-  const [formState, setFormState] = useState({ username: '',  password: '' });
-
-  // update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
-  // submit form
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-  };
-
   return (
-    <div className="signForm-handler">
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label htmlFor="username">Username: </label>
-          <input
-            placeholder="Username here"
-            type="username"
-            name="username"
-            id="signUp-username"
-            value={formState.username}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlfor="password">Password: </label>
-          <input
-            placeholder="Password here"
-            type="password"
-            name="password"
-            id="signUp-pwd"
-            value={formState.password}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <button className='sign-btn'>Sign Up!</button>
-      </form>
-    </div>
+    <SignFormsHandler>
+      <img className="login-img" src={image} alt="vector illustration"></img>
+      <div className="login-form-handler">
+        <h2 className="sign-title">Log In</h2>
+        <SignUpForm />
+      </div>
+    </SignFormsHandler>
   );
 };
 

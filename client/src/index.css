@@ -1,5 +1,3 @@
-/*@import "react-slideshow-image/dist/styles.css";*/
-
 * {
     padding: 0;
     margin: 0;
@@ -9,7 +7,8 @@
 }
 
 :root {
-    --font-family: 'Palanquin', sans-serif;
+    --font-family-content: 'Palanquin', sans-serif;
+    --font-family-header: 'Quicksand', sans-serif;
 
     --base-color-: #f1fffc;
     --accent-: #f5c0c0;
@@ -22,6 +21,11 @@
 #root {
     background-color: var(--base-color-)
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
 .pm1 {
     padding: var(--pd-1-);
     margin: var(--mg-1-);
@@ -32,52 +36,101 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px 25px;
-    background-color: var(--red-);
+    background-color: var(--base-color-);
+    min-height: 100px;  
 }
 header nav {
-    margin: 5px 0;
+    margin: 10px 0;
 }
-header nav ul {
+.nav-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    
+    min-height: 5vh;
 }
 .nav-elements {
-    padding: 10px 50px;
-    margin: 0 20px;
-    border: 2px solid var(--accent-);
+    padding: 10px 30px;
+    margin: 5px 5px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bolder;
-    background-color: var(--pop-);
+    background-color: var(--base-color-);
     color: black;
+    text-decoration: none;
 }
 .nav-elements:hover {
-    background-color: black;
-    color: var(--pop-);
+    background-color: #ffb83d;
+    color: black;
+    border: 1px solid black;
 }
 .link {
     text-decoration: none;
 }
 .font-color {
-    font-family: var(--font-family);
+    font-family: var(--font-family-header);
     color: black;
 }
 .font-color:hover {
-    font-family: var(--font-family);
+    font-family: var(--font-family-header);
     color: white;
 }
 
 
-/* ? REVIEWS STYLES */
+/*  
+====================
+    ? HERO STYLES  
+====================
+*/
+.hero-handler {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin: 0 50px;
+    margin-top: 40px;
+}
+.hero-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    width: 600px;
+}
+.img {
+    background-position: fixed;
+    background-size: cover;
+    background-position: 80%;
+    max-width: 475px;
+    max-height: 409px;
+}
+.hero-title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 46px; 
+    width: 400px; 
+    margin-bottom: 10px;  
+}
+.hero-p {
+    margin-top: 10px;
+    font-family: var(--font-family-content);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+
+
+/*
+=======================
+    ? REVIEWS STYLES
+=======================
+*/
 .reviews-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .container {
     display: flex;
@@ -89,7 +142,7 @@ header nav ul {
     padding: 20px;
     padding-bottom: 5px;
     margin: 10px;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 10px;
 }
 .container div {
@@ -99,41 +152,104 @@ header nav ul {
     display: flex;
     align-items: center;
 }
+.purple {
+    border-color: #e05fd4;
+}
+.red {
+    border-color: #e01d61;
+}
+.blue {
+    border-color: #33aafc;
+}
+#ejmid05c4pvm1 {
+   position: relative;
+   top: 10px;
+}
 
-/* ? FEATURES STYLES */
+/*
+=======================
+    ? FEATURES STYLES 
+=======================
+*/
 
-.features-container {
+.feature-handler {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 99.1vw;
+    min-height: 125vh;
+    background-color: #6ec4ff;
+    padding: 10px;
 }
-.feature-container-left {
-    max-width: 800px;
-    min-width: 400px;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    margin-left: 300px;
-    max-width: 800px;
+.section-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: fit-content;
+    padding: 25px;
+    margin-bottom: 35px;
 }
-.feature-container-right {
-    max-width: 800px;
-    min-width: 400px;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    margin-right: 300px;
-    text-align: right;
+.section-right {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 35px;
 }
-.feature-container h3 {
-    padding-bottom: 5px;
+.feature-img {
+    background-position: fixed;
+    background-size: cover;
+    background-position: 80%;
+    max-width: 375px;
+    max-height: 336px;
+    background-color: #ffbf13;
+    position: relative;
 }
-.feature-container p {
-    padding-top: 5px;
+.feature-img-one {
+    bottom: -25px;
+    right: -35px;
+}
+.feature-img-two {
+    bottom: -25px;
+    left: -35px;
+    padding: 5px;
+}
+.feature-img-three {
+    top: -25px;
+    right: -25px;
+}
+.backdrop {
+    text-align: center;
+    background-color: #e05fd4;
+}
+.img-backdrop-one {
+    width: 375px;
+    height: 336px;
+    margin-right: 125px;
+}
+.img-backdrop-two {
+    width: 375px;
+    height: 269px;
+    margin-left: 125px;
+}
+.img-backdrop-three {
+    width: 336px;
+    height: 336px;
+    margin-right: 125px;
+}
+.feature-content {
+    max-width: 575px;
+    min-width: 225px;   
+    margin-top: 40px; 
+}
+.feature-content h3 {
+    margin-left: 125px;
+    font-size: 32px;
+    font-family: var(--font-family-header);
+}
+.feature-content p {
+    font-family: var(--font-family-content);
 }
 
 
@@ -159,6 +275,10 @@ header nav ul {
     background: #efefef;
     text-align: center;
 }
+.collection-container{
+    height: 100vh;
+    width: 100%;
+}
 
 
 /* ? Collection Page */
@@ -168,8 +288,18 @@ header nav ul {
     border: 1px solid black;
     border-radius: 10px;
     flex-basis: 300px;
-    max-height: 300px;
+    
     background-color: white;
+    display: flex;
+    /* flex-flow: column wrap; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--font-family-header);
+}
+
+.collection-item {
+    padding: 5px 0;
 }
 .game-list {
     list-style-type: none;
@@ -204,32 +334,41 @@ header nav ul {
 
 
 /* ? SignIn SignUp Pages */
-.signForm-handler {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+
+.login-img {
+    background-position: fixed;
+    background-size: cover;
+    background-position: 80%;
+    max-width: 525px;
+    max-height: 406px;
 }
-.signForm-handler form {
+.login-form-handler {
+    text-align: center;
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid black;
-    border-radius: 10px;
-    height: 200px;
-    width: 400px;
-    font-family: 'Palanquin', sans-serif;
 }
-form input {
+.sign-title {
+    font-family: var(--font-family-header);
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+
+.sign-input {
     padding: 8px;
     border-radius: 5px;
     border: 1px solid black;
 }
 .sign-btn {
-    padding: 10px 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid black
 }
-
+.link-signup {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    background-color: #ffb83d;
+}
 
 
 /* ? FOOTER */
@@ -238,11 +377,38 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    border-top: 3px solid black;
     background-color: var(--red-);
 }
+.dev-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.dev-info-container{
+    margin-right: 4vh;
+    margin: 2vh;
+}
+.dev-img {
+    height:8vh;
+    width:8vh;
+    border-radius: 100px;
+}
+.linkedin-icon{
+    height: 4vh;
+    width:4vh ;
+    margin: 0.5vh;
+}
+.dev-name{
+    font-size: 1.3rem;
+    font-family: quicksand;
+}
 
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 717px) {
+    .nav-list {
+        min-height: 10vh;
+    }
     .features-container {
         display: flex;
         flex-flow: column wrap;
