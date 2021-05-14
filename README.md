@@ -23,7 +23,7 @@ npm start
 
 
 # Screenshots
-![image](https://user-images.githubusercontent.com/71112436/118317511-c745ef80-b4bd-11eb-963f-1b7722476468.png)
+![image](https://user-images.githubusercontent.com/71112436/118317875-3cb1c000-b4be-11eb-93d3-00ce63598b34.png)
 
 
 # Technologies Used
